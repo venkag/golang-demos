@@ -1,0 +1,13 @@
+@startuml
+
+participant User as user
+participant Browser as browser
+participant Server as server
+
+user -> browser: Type in "http://localhost:8888"
+browser -> server: GET /
+server -> browser: Return index.html
+browser -> server: GET /sky-space-dark-galaxy.jpg
+browser -> browser: Render index.html, picture
+
+@enduml
